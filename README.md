@@ -20,19 +20,22 @@ This repo contains:
 1) Python
    • Use Python 3.12+.
 
-2) Install minimal dependencies
+2) Install dependencies
    pip install numpy matplotlib
 
----
 
 -------------------------------------
-- Uses protected math to avoid NaN/Inf and numeric blow-ups:
-    EPS = 1e-9
-    pdiv(a,b)  -> safe division (denominator clipped away from zero)
-    plog(a)    -> log(|a| + EPS)
-    psqrt(a)   -> sqrt(|a|)
-    pexp(a)    -> exp(clip(a, -20, 20))
-    ppow(a,b)  -> power with base/exponent clipping
-    _sanitize  -> replaces NaN/Inf with finite values (used on outputs)
-- This keeps evaluation and plotting stable even for extreme inputs.
+
+### Protected math (stability)
+
+- `EPS = 1e-9`
+- `pdiv(a, b)` → safe division (denominator clipped away from zero)
+- `plog(a)` → `log(|a| + EPS)`
+- `psqrt(a)` → `sqrt(|a|)`
+- `pexp(a)` → `exp(clip(a, -20, 20))`
+- `ppow(a, b)` → power with base/exponent clipping
+- `_sanitize(y)` → replace NaN/Inf with finite values (used on outputs)
+
+These guards keep evaluation and plotting stable even for extreme inputs.
+
 
