@@ -38,4 +38,18 @@ This repo contains:
 
 These guards keep evaluation and plotting stable even for extreme inputs.
 
+### Results 
+Results
+In the following, the outcomes found for each problem can be observed:
+
+| Problem | X shape | y shape | Variables | MSE (eval) |
+|---|---|---|---|---|
+| P1 | (1, 500) | (500,) | ['x0'] | 7.12594e-34 |
+| P2 | (3, 5000) | (5000,) | ['x0', 'x1', 'x2'] | 9.56306e+12 |
+| P3 | (3, 5000) | (5000,) | ['x0', 'x1', 'x2'] | 117.037 |
+| P4 | (2, 5000) | (5000,) | ['x0', 'x1'] | 3.71471 |
+| P5 | (2, 5000) | (5000,) | ['x0', 'x1'] | 2.23596e-18 |
+| P6 | (2, 5000) | (5000,) | ['x0', 'x1'] | 2.53209e-06 |
+| P7 | (2, 5000) | (5000,) | ['x0', 'x1'] | 54.3914 |
+| P8 | (6, 50000) | (50000,) | ['x0', 'x1', 'x2', 'x3', 'x4', 'x5'] | 700139 |
 
